@@ -1,4 +1,3 @@
-import React from 'react';
 import Gen1 from './Gen1';
 import Gen2 from './Gen2';
 import Gen3 from './Gen3';
