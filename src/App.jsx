@@ -1,7 +1,6 @@
 import Header from "./components/header/header";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/footer";
-import 
 
 const App = () => {
   return (
