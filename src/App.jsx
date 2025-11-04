@@ -1,7 +1,7 @@
-import React from "react";
 import Header from "./components/header/header";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/footer";
+import 
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
         App.js
       </h1>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="text-[50px] bg-blue-500 m-10 p-10 font-serif">
         <Header title="Header" />
         <Home title="Home" />
         <Footer title="Footer" />

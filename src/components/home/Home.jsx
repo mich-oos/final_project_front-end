@@ -1,5 +1,5 @@
 import Search from "./search";
-import CardInfo from "./cardinfo";
+import CardInfo from "./cardinfo/cardinfo";
 
 const Home = ({ title }) => {
   return (
