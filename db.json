@@ -1,0 +1,37 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "picture": "ME.jpeg",
+      "name": "Anggreiny Michela Nisye Sondakh",
+      "age": 20,
+      "birthplace": "Berau",
+      "birthdate": "28 Februari 2005",
+      "address": "Talawaan, kec. Talawaan, keb. Minahasa Utara",
+      "gender": "Perempuan",
+      "hobby": "Mendengarkan Musik dan Menonton Film"
+    }
+  ],
+  "education": [
+    {
+      "picture": "logo-unklab.jpeg",
+      "university": "Universitas Indonesia",
+      "major": "Information System",
+      "NIM": 105012310072
+    }
+  ],
+  "contacts": {
+    "email": "anggreinysondakh@gmail.com",
+    "phone": "0858-2782-8375"
+  },
+  "funfact": [
+    {
+      "id": 1,
+      "text": "Saya adalah anak sulung dari 2 bersaudara, dan memiliki seorang adik perempuan."
+    },
+    {
+      "id": 2,
+      "text": "Saya selalu mendengarkan musik ketika sedang mengerjakan tugas"
+    }
+  ]
+}
