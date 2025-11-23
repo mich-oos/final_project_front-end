@@ -1,45 +1,22 @@
 {
-  "profile": [
+  "cart": [
     {
-      "id": 1,
-      "picture": "ME.jpeg",
-      "name": "Anggreiny Michela Nisye Sondakh",
-      "age": 20,
-      "birthplace": "Berau",
-      "birthdate": "28 Februari 2005",
-      "address": "Talawaan, kec. Talawaan, keb. Minahasa Utara",
-      "gender": "Perempuan",
-      "agama": "Kristen Protestan",
-      "hobby": "Mendengarkan Musik dan Menonton Film"
+      "id": "1",
+      "name": "Sweater Hoodie Oversize",
+      "price": 350000,
+      "quantity": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=150&h=150&auto=format&fit=crop"
     }
   ],
-  "education": [
+  "users": [
     {
-      "picture": "logo-unklab.jpeg",
-      "university": "Universitas Klabat",
-      "faculty": "Computer Science",
-      "major": "Information System",
-      "NIM": 105012310072
-    }
-  ],
-  "contacts": {
-    "email": "anggreinysondakh@gmail.com",
-    "phone": "0858-2782-8375",
-    "github": "https://github.com/mich-oos",
-    "Instagram": "@anggreiny.anggie"
-  },
-  "funfact": [
-    {
-      "id": 1,
-      "text": "Saya adalah anak sulung dari 2 bersaudara, dan memiliki seorang adik perempuan."
-    },
-    {
-      "id": 2,
-      "text": "Saya selalu mendengarkan musik ketika sedang mengerjakan tugas"
-    },
-    {
-      "id": 3,
-      "text": "Saya suka makan apapun tentang mie"
+      "id": "1",
+      "name": "Alya Maharani",
+      "email": "alya.m@example.com",
+      "phone": "+62 811-2345-6789",
+      "address": "Apartemen Melati Tower B No. 101, Jakarta Selatan",
+      "memberSince": "Mei 2024",
+      "ordersCount": 7
     }
   ]
 }
