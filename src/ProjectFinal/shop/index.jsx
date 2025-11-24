@@ -1,128 +1,83 @@
-import NavbarShop from "./navbar";
-import FooterShop from "./footer";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 
-const Shop = () => {
-  return (
-    <div className="bg-[#EDDFB7] min-h-screen">
-      <NavbarShop />
+const formatPrice = (price) => <span style={{ color: '#D99255' }}>{`Rp. ${price.toLocaleString('id-ID')}`}</span>;
 
-      <div className="p-8">
-        <h2 className="text-3xl font-bold mb-6 text-center">Our Products</h2>
+const ShopPage = () => {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/products');
+        if (!response.ok) {
+          throw new Error('Gagal mengambil daftar produk');
+        }
+        const data = await response.json();
+        setProducts(data);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Hoodie Classic</h3>
-            <p className="text-gray-700">Rp 150.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
+  if (isLoading) {
+    return <div className="p-16 text-center text-xl">Memuat produk...</div>;
+  }
 
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">T-Shirt Oversize</h3>
-            <p className="text-gray-700">Rp 95.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Jacket Streetwear</h3>
-            <p className="text-gray-700">Rp 220.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Dress Casual</h3>
-            <p className="text-gray-700">Rp 180.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Sneakers White</h3>
-            <p className="text-gray-700">Rp 300.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Crop Top</h3>
-            <p className="text-gray-700">Rp 80.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Shirt Formal</h3>
-            <p className="text-gray-700">Rp 160.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Short Pants</h3>
-            <p className="text-gray-700">Rp 90.000</p>
-            <p className="text-yellow-500 text-lg">★★★☆☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">High Heels Elegant</h3>
-            <p className="text-gray-700">Rp 350.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Cardigan Soft</h3>
-            <p className="text-gray-700">Rp 140.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Bucket Hat</h3>
-            <p className="text-gray-700">Rp 70.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Sport Shoes</h3>
-            <p className="text-gray-700">Rp 280.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Mini Skirt</h3>
-            <p className="text-gray-700">Rp 85.000</p>
-            <p className="text-yellow-500 text-lg">★★★☆☆</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Denim Jacket</h3>
-            <p className="text-gray-700">Rp 200.000</p>
-            <p className="text-yellow-500 text-lg">★★★★★</p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="w-full h-40 bg-gray-200 rounded mb-3"></div>
-            <h3 className="text-xl font-bold">Flannel Shirt</h3>
-            <p className="text-gray-700">Rp 130.000</p>
-            <p className="text-yellow-500 text-lg">★★★★☆</p>
-          </div>
-
+  if (error) {
+    return (
+        <div className="p-16 text-center text-red-600">
+            <h2 className="text-2xl font-bold mb-4">Terjadi Kesalahan!</h2>
+            <p className="mb-2">Gagal memuat katalog toko: {error}.</p>
+            <p className="text-sm mt-4 font-semibold">
+                Solusi: Pastikan JSON Server berjalan di Port 3000 (untuk data produk). 
+                Jalankan: <code className="bg-red-100 p-1 rounded">json-server --watch db.json --port 3000</code>
+            </p>
         </div>
-      </div>
+    );
+  }
 
-      <FooterShop />
+  const getImagePath = (imageFileName) => {
+    if (imageFileName) {
+        return `${import.meta.env.BASE_URL}${imageFileName}`;
+    }
+    return ''; 
+  };
+  return (
+    <div className="p-8"> 
+      <h2 className="text-4xl font-bold mb-10 text-center text-black">🛍️ Katalog Produk Clothify</h2>
+      
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        {products.map((product) => (
+          <Link 
+            key={product.id} 
+            to={`/product/${product.id}`} 
+            className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+          >
+            <div className="h-64 overflow-hidden rounded-t-lg bg-gray-100 flex items-center justify-center">
+                <img 
+                    src={getImagePath(product.image)} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+            </div>
+            
+            <div className="p-4">
+              <h3 className="text-lg font-semibold truncate text-gray-800">{product.name}</h3>
+              <p className="font-bold mt-1">{formatPrice(product.price)}</p> 
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Shop; 
-
+export default ShopPage;

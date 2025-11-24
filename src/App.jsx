@@ -1,21 +1,37 @@
-import Header from "./components/header/header";
-import Home from "./components/home/Home";
-import Footer from "./components/footer/footer";
+import { Routes, Route } from 'react-router-dom'; 
+import Navbar from './ProjectFinal/home/navbar'
+import Footer from './ProjectFinal/home/footer'
+import Home from './ProjectFinal/home/index';
+import ShopPage from './ProjectFinal/shop/index'; 
+import ProductDetail from './ProjectFinal/detailproduk/index'; 
+import CartPage from './ProjectFinal/cart/index'; 
+import ProfilePage from './ProjectFinal/profile/index'; 
+import { CartProvider } from './ProjectFinal/cart/CartContext'; 
 
-const App = () => {
+
+const AppContent = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-5">
-      <h1 className="text-3xl font-bold text-center mb-6 bg-yellow-300 p-4 rounded">
-        App.js
-      </h1>
-
-      <div className="text-[50px] bg-blue-500 m-10 p-10 font-serif">
-        <Header title="Header" />
-        <Home title="Home" />
-        <Footer title="Footer" />
-      </div>
+    <div className="min-h-screen" style={{ backgroundColor: '#EDDFB7' }}>
+      <Navbar /> 
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="*" element={<div className="p-20 text-center text-2xl">404 | Halaman tidak ditemukan</div>} />
+        </Routes>
+      </main>
+      <Footer /> 
     </div>
   );
 };
 
-export default App;
+export default function App() {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
+  );
+}

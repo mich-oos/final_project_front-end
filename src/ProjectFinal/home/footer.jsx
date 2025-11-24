@@ -1,16 +1,16 @@
 const Footer = () => {
-return (
-<footer className="bg-[#F6F6F6] p-4 text-center mt-10 shadow-inner">
-<p className="font-semibold text-lg">Vastly Fashion</p>
-<p className="text-sm text-gray-600">© 2024 All Rights Reserved</p>
-<div className="flex justify-center gap-6 mt-2 text-sm text-gray-700">
-<p>Email: support@vastlyfashion.com</p>
-<p>Instagram: @vastlyfashion</p>
-</div>
-</footer>
-);
+  return (
+    <footer className="bg-black text-white p-6 mt-auto"> {/* mt-auto memastikan footer di bawah */}
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="text-sm">&copy; {new Date().getFullYear()} Vastly Fashion. All rights reserved.</p>
+        <div className="mt-2 space-x-4 text-xs">
+          <a href="#" className="hover:text-gray-400">Privacy Policy</a>
+          <a href="#" className="hover:text-gray-400">Terms of Service</a>
+          <a href="#" className="hover:text-gray-400">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
-
-export default Footer; 
-
+export default Footer;

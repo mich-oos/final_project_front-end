@@ -1,11 +1,139 @@
 {
-  "cart": [
+   "products": [
     {
-      "id": "1",
-      "name": "Sweater Hoodie Oversize",
-      "price": 350000,
-      "quantity": 3,
-      "imageUrl": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=150&h=150&auto=format&fit=crop"
+      "id": 1,
+      "name": "Jaket abu",
+      "price": 150000,
+      "description": "Hoodie tebal dengan kantong depan, ideal untuk gaya kasual dan streetwear.",
+      "sizes": ["S", "M", "L", "XL"],
+      "image": "hoddie3.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Jaket putih",
+      "price": 185000,
+      "description": "Kardigan pendek rajut, cocok dipadukan dengan crop top atau gaun midi.",
+      "sizes": ["S", "M", "L"],
+      "image": "hoddie2.jpeg",
+      "rating": 4.0
+    },
+    {
+      "id": 3,
+      "name": "Jaket hitam",
+      "price": 250000,
+      "description": "Sweater rajut tebal, sangat nyaman dan hangat. Pilihan tepat untuk musim hujan.",
+      "sizes": ["M", "L", "XL"],
+      "image": "hoddie1.jpeg",
+      "rating": 5.0
+    },
+    {
+      "id": 4,
+      "name": "Chinese dress",
+      "price": 75000,
+      "description": "Kaos katun 100% berkualitas tinggi dengan desain polos, must-have untuk basic outfit.",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "image": "dress3.jpeg",
+      "rating": 4.2
+    },
+    {
+      "id": 5,
+      "name": "Dress Pink",
+      "price": 320000,
+      "description": "Kaos katun 100% berkualitas tinggi dengan desain polos, must-have untuk basic outfit.",
+      "sizes": ["27", "28", "29", "30", "31"],
+      "image": "dress1.jpeg",
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "name": "1 Set Korean Style",
+      "price": 199000,
+      "description": "Kaos katun 100% berkualitas tinggi dengan desain polos, must-have untuk basic outfit.",
+      "sizes": ["All Size"],
+      "image": "dress2.jpeg",
+      "rating": 3.9
+    },
+    {
+      "id": 7,
+      "name": "Hak hitam",
+      "price": 145000,
+      "description": "Nikmati perpaduan gaya minimalis dan kenyamanan maksimal yang mendukung aktivitas Anda sepanjang hari.",
+      "sizes": [37, 38, 39, 40, 41],
+      "image": "sepatu4.jpeg",
+      "rating": 4.6
+    },
+    {
+      "id": 8,
+      "name": "Sendal Hitam",
+      "price": 280000,
+      "description": "Nikmati perpaduan gaya minimalis dan kenyamanan maksimal yang mendukung aktivitas Anda sepanjang hari.",
+      "sizes": [37, 38, 39, 40, 41],
+      "image": "sepatu3.jpeg",
+      "rating": 4.4
+    },
+    {
+      "id": 9,
+      "name": "sepatu N Coklat",
+      "price": 170000,
+      "description": "Nikmati perpaduan gaya minimalis dan kenyamanan maksimal yang mendukung aktivitas Anda sepanjang hari.",
+      "sizes": [37, 38, 39, 40, 41],
+      "image": "sepatu2.jpeg",
+      "rating": 4.7
+    },
+    {
+      "id": 10,
+      "name": "Flat Shoes Hitam",
+      "price": 160000,
+      "description": "Nikmati perpaduan gaya minimalis dan kenyamanan maksimal yang mendukung aktivitas Anda sepanjang hari.",
+      "sizes": [37, 38, 39, 40, 41],
+      "image": "sepatu6.jpeg",
+      "rating": 4.1
+    },
+    {
+      "id": 11,
+      "name": "Kemeja Putih",
+      "price": 450000,
+      "description": "Kemeja utih tipis yang lembut, nyaman dipakai sebagai luaran atau kemeja kasual.",
+      "sizes": ["S", "M"],
+      "image": "baju5.jpeg",
+      "rating": 4.9
+    },
+    {
+      "id": 12,
+      "name": "Kemeja Denim",
+      "price": 225000,
+      "description": "Kemeja denim tipis yang lembut, nyaman dipakai sebagai luaran atau kemeja kasual.",
+      "sizes": ["S", "M", "L", "XL"],
+      "image": "baju4.jpeg",
+      "rating": 4.3
+    },
+    {
+      "id": 13,
+      "name": "Kemeja Navi",
+      "price": 95000,
+      "description": "Kemeja navi berlengan pendek tipis yang lembut, nyaman dipakai sebagai luaran atau kemeja kasual.",
+      "sizes": ["S", "M", "L"],
+      "image": "baju3.jpeg",
+      "rating": 4.0
+    },
+    {
+      "id": 14,
+      "name": "Blouse Merah",
+      "price": 175000,
+      "description": "Rok lipit (pleated) panjang, memberikan flow yang indah saat bergerak.",
+      "sizes": ["All Size"],
+      "image": "baju2.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": 15,
+      "name": "Blouse Coklat",
+      "price": 210000,
+      "description": "Kemeja denim tipis yang lembut, nyaman dipakai sebagai luaran atau kemeja kasual.",
+      "sizes": ["S", "M", "L", "XL"],
+      "image": "baju1.jpeg",
+      "rating": 4.2
     }
   ],
   "users": [
